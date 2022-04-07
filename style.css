@@ -1,0 +1,19 @@
+body {
+    background-image: url("images/real.jpeg");
+}
+
+button {
+    position: absolute;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#title {
+    font-size: 200px;
+    background-color: white;
+}
+
+#sub {
+    font-size: 200px;
+    background-color: white;
+}
