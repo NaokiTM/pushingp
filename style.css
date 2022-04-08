@@ -3,9 +3,8 @@ body {
 }
 
 button {
-    position: absolute;
-    margin-left: 40%;
-    margin-right: 40%;
+    display: block;
+    margin: 10px auto 20px;
 }
 
 #title {
