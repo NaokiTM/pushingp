@@ -4,7 +4,6 @@ body {
     font-family: 'Comic Sans MS';
 }
 
-<<<<<<< HEAD
 #button {
     display: block;
     margin: 10px auto 20px;
@@ -17,11 +16,6 @@ body {
     background-size: cover;
     border-radius: 30px;
     border: 3px solid;
-=======
-button {
-    display: block;
-    margin: 10px auto 20px;
->>>>>>> da0b507301817d20cf757dd5dcc062138654db27
 }
 
 
