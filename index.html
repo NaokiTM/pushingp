@@ -9,14 +9,101 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-  <div id = "container">
-    <div id = "title">Push P!</div>    
-    <div id = "quote"><i>"I push P - highly recommend!" - Suneil Basu</i></div>
-    <div id = "sub" style = "font-size: 60px;">0</div>
+<body style = 'background-image: url("imagesp/mariopushingp.jpg"); background-size: 300px; font-family: Comic Sans MS;'>
+  <div id = "container" style = 'font-size: 40px;background-color: blue; text-align: center; color: white; border: 3px solid; border-radius: 30px; border-color: black;'>
+    <marquee id = "quote" direction="right" scrollamount="20"><i>"I push P - highly recommend!" - Suneil Basu</i></marquee>
+    <div id = "title" style ='font-size: 80px;'>Push P!</div>    
+    <div id = "sub" style = 'font-size: 80px;'>0</div>
   </div>
-  <button id ="button" type="button" onclick = "buttonClick()"></button>
-  <script src="script.js"></script>
-</body>
+  <button type="button" onclick = "buttonClick()"  style = 'display: block; margin: 10px auto 20px; /* background-image: url("https://i1.sndcdn.com/artworks-QaAfZRINgUC5YD95-azdZLw-t500x500.jpg"); */ background-color: black; border-color: black; height: 150px; width: 150px; background-image: url("imagesp/p.png"); background-size: cover; border-radius: 30px; border: 3px solid;'></button>
+  <div id = "upgradecontainer" style = 'border: 2px solid black;width: 20%;border-radius: 10px;background-color: blue;color: white;'>upgrades! (free (for now))
+      <button type="button" id = "doubleclick" class="upgrades" style = 'background-image: url("imagesp/cursor.png");' onclick = "cursor()"><strong>doubleclick:</strong> autoclicks once a second, just for you :)</button>
+      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("images/mario.jpg");' onclick = "mario()"><strong>Mario:</strong> mario is pushin P!</button>
+      <button type="button" id = "gunna" class = "upgrades" style = 'background-image: url("images/gunna.jpg");' onclick = "gunna()"><strong>Gunna:</strong> Pointers in the Patek and my piece, I'm pushin' P<br>
+        Copped new hammers for my P, we don't want no peace<br>
+        Got a spot across the spot, just for Ps<br>
+        Dropped the dot and then we plottin', exotic Ps</button>
+  </div>
+  <style>
+    .upgrades {
+      color: black;
+      width: 100%;
+      border: 2px solid black;
+      margin-top: 2px solid;
+      display: block;
+      text-align: left;
+      background-size: cover;
+      border-radius: 10px;
+    }   
 
+    strong {
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 17px;
+    }
+  </style>
+  <script>
+    let sub = document.getElementById('sub')
+    let subvalu = sub.innerHTML
+    let subvalue = parseInt(subvalu)
+
+    function cursor() {
+      var intervalID = window.setInterval(doubleclickcursor, 1000);
+        function doubleclickcursor() {
+          let newsubvalue = ++subvalue
+          sub.innerHTML = newsubvalue
+        }
+    }
+
+    function mario() {
+        let subvalue = subvalue - 50
+        var intervalID = window.setInterval(marioo, 500)
+        function marioo() {
+          let newsubvalue = ++subvalue
+          sub.innerHTML = newsubvalue
+        }
+    }
+
+    function gunna() {
+        var intervalID = window.setInterval(gunna, 100)
+        function gunna() {
+          let newsubvalue = ++subvalue
+          sub.innerHTML = newsubvalue
+        }
+    }
+
+    function buttonClick() {
+      let newsubvalue = ++subvalue
+      sub.innerHTML = newsubvalue
+
+      if(subvalue == 10) {
+          alert('You pushed P 10 times!')
+      }
+      if(subvalue == 69) {
+          alert('69nice69')
+      }
+      if(subvalue == 100) {
+          alert('You pushed P 100 times!')
+      }
+      if(subvalue == 420) {
+          alert('smoke weed every day')
+      }
+      if(subvalue == 500) {
+          alert('You should probably stop now')
+      }
+      if(subvalue == 1000) {
+          alert('You have been pushing too much P; its time to stop')
+      }
+      if(subvalue == 69420) {
+          alert('69 + 420 = double niceee')
+      }
+      if(subvalue == 100000) {
+          alert('impressive, but shows that you get zero pussy')
+      }
+      if(subvalue == 1000000) {
+          alert('should i add a notification for a billion?')
+      }
+    }  
+  </script>
+</body>
 </html>
