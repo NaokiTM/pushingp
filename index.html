@@ -15,32 +15,67 @@
     <div id = "title" style ='font-size: 80px;'>Push P!</div>    
     <div id = "sub" style = 'font-size: 80px;'>0</div>
   </div>
-  <button type="button" onclick = "buttonClick()"  style = 'display: block; margin: 10px auto 20px; /* background-image: url("https://i1.sndcdn.com/artworks-QaAfZRINgUC5YD95-azdZLw-t500x500.jpg"); */ background-color: black; border-color: black; height: 150px; width: 150px; background-image: url("imagesp/p.png"); background-size: cover; border-radius: 30px; border: 3px solid;'></button>
-  <div id = "upgradecontainer" style = 'border: 2px solid black;width: 20%;border-radius: 10px;background-color: blue;color: white;'>upgrades! (free (for now))
+  <button type="button" id = "P"onclick = "buttonClick()"></button>
+  <div id = "twocontainer">
+    <div id = "titlecontainer">upgrades!(free(for now)) click to use!</div>
       <button type="button" id = "doubleclick" class="upgrades" style = 'background-image: url("imagesp/cursor.png");' onclick = "cursor()"><strong>doubleclick:</strong> autoclicks once a second, just for you :)</button>
-      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("images/mario.jpg");' onclick = "mario()"><strong>Mario:</strong> mario is pushin P!</button>
-      <button type="button" id = "gunna" class = "upgrades" style = 'background-image: url("images/gunna.jpg");' onclick = "gunna()"><strong>Gunna:</strong> Pointers in the Patek and my piece, I'm pushin' P<br>
-        Copped new hammers for my P, we don't want no peace<br>
-        Got a spot across the spot, just for Ps<br>
-        Dropped the dot and then we plottin', exotic Ps</button>
+      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("imagesp/mario.jpg");' onclick = "mario()"><strong>Mario:</strong> mario is pushin P!</button>
+      <button type="button" id = "gunna" class = "upgrades" style = 'background-image: url("imagesp/gunna.jpg"); ' onclick = "gunna()"><strong>Gunna:</strong> Pointers in the Patek and my piece, I'm pushin' P<br> 
+      Copped new hammers for my P, we don't want no peace<br>
+      Got a spot across the spot, just for Ps<br>
+      Dropped the dot and then we plottin', exotic Ps</button>
   </div>
   <style>
+
+    #titlecontainer {
+      padding-bottom: 5px;
+      text-decoration: underline;
+    }
+
     .upgrades {
       color: black;
-      width: 100%;
+      /* width: 100%; */
       border: 2px solid black;
       margin-top: 2px solid;
-      display: block;
-      text-align: left;
+      display: inline-block;
       background-size: cover;
       border-radius: 10px;
+      height: 150px;
+      vertical-align: text-top;
+      padding: 10px;
     }   
+
+    #twocontainer {
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: blue;
+      color: white;
+      text-align: center;
+      width: 70%;
+      margin: 10px auto 20px;
+      padding: 10px;
+      padding-top: 5px;
+    }
 
     strong {
       text-decoration: underline;
       font-weight: bold;
       font-size: 17px;
     }
+
+    #P {
+      display: block;
+      margin: 10px auto 20px;
+      background-color: black;
+      border-color: black; 
+      height: 150px; 
+      width: 150px; 
+      background-image: url("imagesp/p.png"); 
+      background-size: cover; 
+      border-radius: 30px; 
+      border: 3px solid;
+    }
+
   </style>
   <script>
     let sub = document.getElementById('sub')
