@@ -10,7 +10,7 @@
 </head>
 
 <body style = 'background-image: url("imagesp/mariopushingp.jpg"); background-size: 300px; font-family: Comic Sans MS;'>
-  <div id = "container" style = 'font-size: 40px;background-color: blue; text-align: center; color: white; border: 3px solid; border-radius: 30px; border-color: black;'>
+  <div id = "container">
     <marquee id = "quote" direction="right" scrollamount="20"><i>"I push P - highly recommend!" - Suneil Basu</i></marquee>
     <div id = "title" style ='font-size: 80px;'>Push P!</div>    
     <div id = "sub" style = 'font-size: 80px;'>0</div>
@@ -18,14 +18,24 @@
   <button type="button" id = "P"onclick = "buttonClick()"></button>
   <div id = "twocontainer">
     <div id = "titlecontainer">upgrades!(free(for now)) click to use!</div>
-      <button type="button" id = "doubleclick" class="upgrades" style = 'background-image: url("imagesp/cursor.png");' onclick = "cursor()"><strong>doubleclick:</strong> autoclicks once a second, just for you :)</button>
-      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("imagesp/mario.jpg");' onclick = "mario()"><strong>Mario:</strong> mario is pushin P!</button>
-      <button type="button" id = "gunna" class = "upgrades" style = 'background-image: url("imagesp/gunna.jpg"); ' onclick = "gunna()"><strong>Gunna:</strong> Pointers in the Patek and my piece, I'm pushin' P<br> 
+      <button type="button" id = "doubleclick" class="upgrades" style = 'background-image: url("imagesp/cursor.png");' onclick = "cursor()"><strong>doubleclick(1cps):</strong><br> autoclicks once a second, just for you :)</button>
+      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("imagesp/mario.jpg");' onclick = "mario()"><strong>Mario(2cps):</strong><br> mario is pushin P!</button>
+      <button type="button" id = "gunna" class = "upgrades" style = 'background-image: url("imagesp/gunna.jpg"); ' onclick = "gunna()"><strong>Gunna(10cps):</strong><br> Pointers in the Patek and my piece, I'm pushin' P<br> 
       Copped new hammers for my P, we don't want no peace<br>
       Got a spot across the spot, just for Ps<br>
       Dropped the dot and then we plottin', exotic Ps</button>
   </div>
   <style>
+    #container {
+      font-size: 40px;
+      background-color: blue; 
+      text-align: center; 
+      color: white; 
+      border: 3px solid; border-radius: 30px; 
+      border-color: black;
+      width: 1900px;
+      margin: 10px auto 20px;
+    }
 
     #titlecontainer {
       padding-bottom: 5px;
@@ -51,11 +61,11 @@
       background-color: blue;
       color: white;
       text-align: center;
-      width: 935px;
+      width: 760px;
       margin: 10px auto 20px;
       padding: 10px;
       padding-top: 5px;
-      margin-top: 250px;
+      margin-top: 100px;
     }
 
     strong {
@@ -75,6 +85,7 @@
       background-size: cover; 
       border-radius: 30px; 
       border: 3px solid;
+      margin-top: 100px;
     }
 
   </style>
