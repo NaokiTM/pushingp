@@ -17,15 +17,20 @@
   </div>
   <button type="button" id = "P"onclick = "buttonClick()"></button>
   <div id = "twocontainer">
-    <div id = "titlecontainer">upgrades!(free(for now)) click to use!</div>
-      <button type="button" id = "doubleclick" class="upgrades" style = 'background-image: url("imagesp/cursor.png");' onclick = "cursor()"><strong>doubleclick(1cps):</strong><br> autoclicks once a second, just for you :)</button>
-      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("imagesp/mario.jpg");' onclick = "mario()"><strong>Mario(2cps):</strong><br> mario is pushin P!</button>
+    <div id = "titlecontainer">upgrades - click to buy!</div>
+      <button type="button" id = "doubleclick" class="upgrades" style = 'background-image: url("imagesp/cursor.png");' onclick = "cursor()"><strong>doubleclick(1cps):</strong><br> autoclicks once a second, just for you :)<br><strong>10 pushes</strong><br><div class = "upcnt" id = "upcnt1">0</div></button>
+      <button type="button" id = "mario" class = "upgrades" style = 'background-image: url("imagesp/mario.jpg");' onclick = "mario()"><strong>Mario(2cps):</strong><br> mario is pushin P!<br><strong>100 pushes</strong><br><div class = "upcnt" id = "upcnt2">0</div></button>
       <button type="button" id = "gunna" class = "upgrades" style = 'background-image: url("imagesp/gunna.jpg"); ' onclick = "gunna()"><strong>Gunna(10cps):</strong><br> Pointers in the Patek and my piece, I'm pushin' P<br> 
       Copped new hammers for my P, we don't want no peace<br>
       Got a spot across the spot, just for Ps<br>
-      Dropped the dot and then we plottin', exotic Ps</button>
+      Dropped the dot and then we plottin', exotic Ps <br>
+    <strong>1000 pushes</strong><br><div class = "upcnt" id = "upcnt3">0</div></button>
   </div>
   <style>
+    .upcnt { 
+      font-size: 30px;
+    }
+
     #container {
       font-size: 40px;
       background-color: blue; 
@@ -95,27 +100,51 @@
     let subvalue = parseInt(subvalu)
 
     function cursor() {
-      var intervalID = window.setInterval(doubleclickcursor, 1000);
+      if (subvalue >= 10) {
+      let upcnt1 = document.getElementById('upcnt1')
+      let upcnt1v = upcnt1.innerHTML
+      let upcnt1p = parseInt(upcnt1v)
+      let newupcnt1 = ++upcnt1p
+      upcnt1.innerHTML = newupcnt1
+
+        var intervalID = window.setInterval(doubleclickcursor, 1000);
         function doubleclickcursor() {
           let newsubvalue = ++subvalue
           sub.innerHTML = newsubvalue
         }
+      }
     }
 
     function mario() {
+      if (subvalue >= 100) {
+        let upcnt2 = document.getElementById('upcnt2')
+        let upcnt2v = upcnt1.innerHTML
+        let upcnt2p = parseInt(upcnt2v)
+        let newupcnt2 = ++upcnt2p
+        upcnt2.innerHTML = newupcnt2
+
         var intervalID = window.setInterval(marioo, 500)
         function marioo() {
           let newsubvalue = ++subvalue
           sub.innerHTML = newsubvalue
         }
+      }
     }
 
     function gunna() {
+      if(subvalue >= 1000) {
+        let upcnt3 = document.getElementById('upcnt3')
+        let upcnt3v = upcnt1.innerHTML
+        let upcnt3p = parseInt(upcnt3v)
+        let newupcnt3 = ++upcnt3p
+        upcnt3.innerHTML = newupcnt3
+
         var intervalID = window.setInterval(gunna, 100)
         function gunna() {
           let newsubvalue = ++subvalue
           sub.innerHTML = newsubvalue
         }
+      }
     }
 
     function buttonClick() {
